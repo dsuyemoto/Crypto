@@ -34,6 +34,11 @@ namespace Crypto.Controllers
             return View();
         }
 
+        public IActionResult Crypto(CryptoInput cryptoInput)
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

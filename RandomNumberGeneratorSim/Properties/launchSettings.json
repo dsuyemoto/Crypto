@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RandomNumberGeneratorSim": {
+      "commandName": "Project",
+      "commandLineArgs": "100"
+    }
+  }
+}
