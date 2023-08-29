@@ -34,9 +34,9 @@ namespace Crypto.Controllers
             return View();
         }
 
-        public IActionResult Crypto(CryptoInput cryptoInput)
+        public IActionResult Crypto()
         {
-            return View();
+            return RedirectToAction("UserSubmission", "Crypto");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
