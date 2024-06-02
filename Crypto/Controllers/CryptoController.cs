@@ -21,10 +21,14 @@ namespace Crypto.Controllers
 
         public IActionResult Decrypt(CryptoInput cryptoInput)
         {
-            CryptoOutput cryptoOutput = new CryptoOutput();
-            cryptoOutput.Result = "TestOut";
+            var converter = new CryptoConverter.Converter(
+                CryptoConverter.Converter.ConverterType.Vignere,
+                cryptoInput.Key,
+                cryptoInput.Alphabet);
+            var cryptoOutput = new CryptoOutput();
+            cryptoOutput.Result = converter.Decrypt(cryptoInput.Data);
 
-            return View();
+            return View(cryptoOutput);
         }
     }
 }

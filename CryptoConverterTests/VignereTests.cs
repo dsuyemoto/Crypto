@@ -16,7 +16,7 @@ namespace CryptoConverterTests
         [SetUp]
         public void SetUp()
         {
-            _converter = new Converter(Converter.ConverterType.Vignere, KEY, ALPHABET);
+            _converter = new Converter(Converter.ConverterType.Vignere, KEY, new Alphabet(Alphabet.AlphabetType.Latin));
         }
 
         [Test()]

@@ -13,7 +13,7 @@ namespace CryptoConsole
             var converter = new Converter(
                 Converter.ConverterType.Vignere,
                 "suyemoto",
-                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                new Alphabet(Alphabet.AlphabetType.Latin)
                 );
 
             ConsoleKeyInfo selection;

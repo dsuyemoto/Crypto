@@ -11,14 +11,14 @@
             Substitution
         }
 
-        public Converter(ConverterType converter, string keys, string alphabet)
+        public Converter(ConverterType converter, string keys, Alphabet alphabet)
         {
             if (converter == ConverterType.Vignere)
-                _converter = new Vignere(keys, alphabet);
+                _converter = new Vignere(keys, alphabet.Characters);
             if (converter == ConverterType.Substitution)
-                _converter = new Substitution(keys, alphabet);
+                _converter = new Substitution(keys, alphabet.Characters);
             if (converter == ConverterType.MonoAlphabetic)
-                _converter = new MonoAlphabetic(keys, alphabet);
+                _converter = new MonoAlphabetic(keys, alphabet.Characters);
         }
 
         public string Encrypt(string unencryptedText)
