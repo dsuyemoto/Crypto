@@ -1,9 +1,6 @@
-﻿using System;
-using System.Text;
-
-namespace CryptoConverter
+﻿namespace CryptoConverterNET
 {
-    public class Vignere : IConverter
+    public class Vignere : ICryptoService
     {
         char[] _keys;
         char[] _alphabet;

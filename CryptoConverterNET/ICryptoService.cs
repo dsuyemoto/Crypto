@@ -1,6 +1,6 @@
-﻿namespace CryptoConverter
+﻿namespace CryptoConverterNET
 {
-    public interface IConverter
+    public interface ICryptoService
     {
         string Decrypt(string cipherText);
         string Encrypt(string plainText);

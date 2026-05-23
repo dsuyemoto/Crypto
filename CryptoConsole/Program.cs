@@ -10,10 +10,10 @@ namespace CryptoConsole
             const string ENCRYPT = "D1";
             const string DECRYPT = "D2";
 
-            var converter = new Converter(
-                Converter.ConverterType.Vignere,
+            var converter = new CryptoService(
+                CryptoService.CryptoType.Vignere,
                 "suyemoto",
-                new Alphabet(Alphabet.AlphabetType.Latin)
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 );
 
             ConsoleKeyInfo selection;

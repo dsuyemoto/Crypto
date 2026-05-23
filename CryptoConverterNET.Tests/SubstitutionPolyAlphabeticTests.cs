@@ -1,22 +1,21 @@
-﻿using CryptoConverter;
-using NUnit.Framework;
+﻿using CryptoConverterNET;
 
 namespace CryptoConverterTests
 {
     [TestFixture()]
-    class SubstitutionTests
+    class SubstitutionPolyAlphabeticTests
     {
         const string UNENCRYPTEDTEXT = "ABCDEFGH";
         const string ENCRYPTEDTEXT = "ZYXWVUTS";
 
-        Converter _converter;
-        const string KEYS = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
+        CryptoService _converter;
+        const string KEY = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
         const string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         [SetUp]
         public void Setup()
         {
-            _converter = new Converter(Converter.ConverterType.Substitution, KEYS, new Alphabet(Alphabet.AlphabetType.Latin));
+            _converter = new CryptoService(CryptoService.CryptoType.PolyAlphabetic, KEY, ALPHABET);
         }
 
         [Test()]
@@ -24,19 +23,19 @@ namespace CryptoConverterTests
         {
             var encrypted = _converter.Encrypt(UNENCRYPTEDTEXT);
 
-            Assert.AreEqual(ENCRYPTEDTEXT, encrypted);
+            Assert.That(encrypted, Is.EqualTo(ENCRYPTEDTEXT));
         }
 
         [Test()]
         public void Validator_Unencrypted_TrueTest()
         {
-            Assert.IsTrue(_converter.Validator(ALPHABET, false));
+            Assert.That(_converter.Validator(ALPHABET, false), Is.True);
         }
 
         [Test()]
         public void Validator_Encrypted_TrueTest()
         {
-            Assert.IsTrue(_converter.Validator(KEYS, true));
+            Assert.That(_converter.Validator(KEY, true), Is.True);
         }
 
         [Test()]
@@ -44,7 +43,7 @@ namespace CryptoConverterTests
         {
             var unencrypted = _converter.Decrypt(ENCRYPTEDTEXT);
 
-            Assert.AreEqual(UNENCRYPTEDTEXT, unencrypted);
+            Assert.That(unencrypted, Is.EqualTo(UNENCRYPTEDTEXT));
         }
     }
 }

@@ -1,12 +1,11 @@
-﻿using CryptoConverter;
-using NUnit.Framework;
+﻿using CryptoConverterNET;
 
 namespace CryptoConverterTests
 {
     [TestFixture()]
     public class VignereTests
     {
-        Converter _converter;
+        CryptoService _converter;
 
         const string KEY = "suyemoto";
         const string UNENCRYPTEDTEXT = "this is a test";
@@ -16,7 +15,7 @@ namespace CryptoConverterTests
         [SetUp]
         public void SetUp()
         {
-            _converter = new Converter(Converter.ConverterType.Vignere, KEY, new Alphabet(Alphabet.AlphabetType.Latin));
+            _converter = new CryptoService(CryptoService.CryptoType.Vignere, KEY, ALPHABET);
         }
 
         [Test()]
@@ -24,7 +23,7 @@ namespace CryptoConverterTests
         {
             var encrypted = _converter.Encrypt(UNENCRYPTEDTEXT);
 
-            Assert.AreEqual(ENCRYPTEDTEXT, encrypted);
+            Assert.That(encrypted, Is.EqualTo(ENCRYPTEDTEXT));
         }
 
         [Test()]
@@ -32,7 +31,7 @@ namespace CryptoConverterTests
         {
             var unencrypted = _converter.Decrypt(ENCRYPTEDTEXT);
 
-            Assert.AreEqual(UNENCRYPTEDTEXT, unencrypted);
+            Assert.That(unencrypted, Is.EqualTo(UNENCRYPTEDTEXT));
         }
 
         [Test()]
@@ -40,7 +39,7 @@ namespace CryptoConverterTests
         {
             var result = Vignere.GetCharFromAlphabet(ALPHABET.ToCharArray(), 'g', 25);
 
-            Assert.AreEqual('f', result);
+            Assert.That(result, Is.EqualTo('f'));
         }
     }
 }

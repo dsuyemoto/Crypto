@@ -1,21 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29409.12
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoWeb", "Crypto\CryptoWeb.csproj", "{91E5F24F-CFC4-4719-814F-966046AB83C8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoConsole", "CryptoConsole\CryptoConsole.csproj", "{EC0022B7-0541-4974-B087-65D39812BBB9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoConverter", "CryptoConverter\CryptoConverter.csproj", "{9F18FFD5-ABBC-4DCE-AA09-B34276A4380C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoConverter.Tests", "CryptoConverterTests\CryptoConverter.Tests.csproj", "{3B61C1D6-C8A1-49E3-B3F1-3C9EB03DD9C6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomNumberGenerator", "RandomNumberGenerator\RandomNumberGenerator.csproj", "{35359312-2259-4F7E-966A-682E3F769338}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomNumberGeneratorSim", "RandomNumberGeneratorSim\RandomNumberGeneratorSim.csproj", "{5852C454-2328-4BDB-A1AA-72DEC0A9AC84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoWebTests", "CryptoWebTests\CryptoWebTests.csproj", "{E9313626-BC39-4AB3-BFAF-1D8130D24562}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CryptoPython", "CryptoPython\CryptoPython.pyproj", "{69B17C11-752B-41FC-B9C0-AAE8ACF862FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoConverterNET", "CryptoConverterNET\CryptoConverterNET.csproj", "{C0FB9798-70D3-4FD6-8712-036812E55494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoConverterNET.Tests", "CryptoConverterNET.Tests\CryptoConverterNET.Tests.csproj", "{B9725D18-C957-41C4-A508-950C4708C13F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +33,6 @@ Global
 		{EC0022B7-0541-4974-B087-65D39812BBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC0022B7-0541-4974-B087-65D39812BBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC0022B7-0541-4974-B087-65D39812BBB9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F18FFD5-ABBC-4DCE-AA09-B34276A4380C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F18FFD5-ABBC-4DCE-AA09-B34276A4380C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F18FFD5-ABBC-4DCE-AA09-B34276A4380C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F18FFD5-ABBC-4DCE-AA09-B34276A4380C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B61C1D6-C8A1-49E3-B3F1-3C9EB03DD9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B61C1D6-C8A1-49E3-B3F1-3C9EB03DD9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B61C1D6-C8A1-49E3-B3F1-3C9EB03DD9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B61C1D6-C8A1-49E3-B3F1-3C9EB03DD9C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35359312-2259-4F7E-966A-682E3F769338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35359312-2259-4F7E-966A-682E3F769338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35359312-2259-4F7E-966A-682E3F769338}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +45,16 @@ Global
 		{E9313626-BC39-4AB3-BFAF-1D8130D24562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9313626-BC39-4AB3-BFAF-1D8130D24562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9313626-BC39-4AB3-BFAF-1D8130D24562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B17C11-752B-41FC-B9C0-AAE8ACF862FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B17C11-752B-41FC-B9C0-AAE8ACF862FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FB9798-70D3-4FD6-8712-036812E55494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FB9798-70D3-4FD6-8712-036812E55494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FB9798-70D3-4FD6-8712-036812E55494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FB9798-70D3-4FD6-8712-036812E55494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9725D18-C957-41C4-A508-950C4708C13F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9725D18-C957-41C4-A508-950C4708C13F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9725D18-C957-41C4-A508-950C4708C13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9725D18-C957-41C4-A508-950C4708C13F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

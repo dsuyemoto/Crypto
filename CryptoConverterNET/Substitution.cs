@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CryptoConverter
+﻿namespace CryptoConverterNET
 {
-    public class Substitution : IConverter
+    public class Substitution : ICryptoService
     {
         Dictionary<char, char> _keytable;
         protected char[] _keys;

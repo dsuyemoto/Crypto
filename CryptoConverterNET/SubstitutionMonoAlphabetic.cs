@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-
-namespace CryptoConverter
+﻿namespace CryptoConverterNET
 {
-    public class MonoAlphabetic : Substitution
+    public class SubstitutionMonoAlphabetic : Substitution
     {
 
-        public MonoAlphabetic(string key, string alphabet) : base(key, alphabet)
+        public SubstitutionMonoAlphabetic(string key, string alphabet) : base(key, alphabet)
         {
+            if (key.Length != alphabet.Length) throw new Exception("Key length and alphabet length are not equal");
         }
 
         public override string Decrypt(string cipherText)
